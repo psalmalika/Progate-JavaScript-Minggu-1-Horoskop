@@ -1,0 +1,38 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Program Horoskop</h1>
+    <button type="button">Click here!</button>
+    <p>Keberuntungan Anda hari ini:</p>
+    <hr>
+    <p id="hasil"></p>
+    
+    <script>
+      const button = document.querySelector("button");
+      
+      button.addEventListener('click', () => {
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = "Tombol ditekan";
+        
+        const randomNumber = Date.now() % 3;
+        console.log(randomNumber);
+      
+        switch(randomNumber) {
+          case 0:
+            paragraph.innerHTML = "Hebat!!";
+            hasil.append(paragraph);
+            break;
+          case 1:
+            paragraph.innerHTML = "Boleh juga!";
+            hasil.append(paragraph);
+            break;
+          default:
+            paragraph.innerHTML = "Mengerikan...";
+            hasil.append(paragraph);
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
